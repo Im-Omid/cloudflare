@@ -1,0 +1,14 @@
+name: SSHX session
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  sshx:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start SSHX
+        run: curl -sSf https://sshx.io/get | sh -s run
